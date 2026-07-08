@@ -1,0 +1,364 @@
+@charset "utf-8"; /*무조건 첫줄에 넣을 것. 언어 인코딩 세팅. 세미콜론 꼭! 찍어주새세요*/
+*{
+    margin: 0;
+    padding: 0;
+}
+img, video, iframe{
+    display: block; /*위 세 요소 밑의 여백 없애고 시작*/
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    font-family: 'Pretendard';
+    font-size: 25px;
+    color: #224E9F;
+    line-height: 1.5;
+    
+}
+/*header*/
+#header{
+    height: 100px;
+    background-color: #E4E8F1;
+ }
+ #header .inner{
+     display: flex;
+     justify-content: space-between; 
+     align-items: flex-end;
+     height: 100px;
+     width: 1320px;
+     margin: 0 auto;
+ }
+ #header .inner img{
+     padding-bottom: 10px;
+ }
+ #header .inner ul{
+     display: flex;
+     gap: 60px;
+     padding-bottom: 10px;
+ }
+ #header .inner li{
+    font-weight: 700;
+ }
+ #header .inner .menu_earth{
+     padding-left: 55px;
+ }
+ /*program_introduce*/
+ #program_introduce{
+    width: 1320px;
+    margin: 0 auto;
+ }
+ #program_introduce h2{
+    font-family: "Gveret Levin", cursive;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding: 80px 0;
+    line-height: 1;
+    text-align: center;
+}
+#program_introduce .swiper-wrapper img{
+    margin: 0 auto;
+}
+/*one_day_tour*/
+#one_day_tour h2{
+    font-family: "Gveret Levin", cursive;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    line-height: 1;
+    text-align: center;
+}
+.video{
+    width: 800px;
+    height: 800px;
+}
+.tour_bg{
+    background: #FAFAFA;
+    background: linear-gradient(0deg, rgba(250, 250, 250, 1) 0%, rgba(34, 78, 159, 0.3) 55%, rgba(250, 250, 250, 1) 100%);
+    position: relative;
+}
+.stamp{
+    position: absolute;
+    top: -150px;
+    right: 105px;
+}
+.slate{
+    width: 1012px;
+    margin: 0 auto;
+    background-image: url(../img/program_page/tour_slate.png);
+    background-repeat: no-repeat;
+    padding: 300px 0;
+    position: relative;
+    z-index: 5;
+}
+.tour .swiper-slide>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*tour_des1*/
+.tour .swiper-slide{
+    display: flex;
+    column-gap: 50px;
+    justify-content: center;
+}
+.tour_des1 h3{
+    padding-bottom: 30px;
+    border-bottom: solid 1px #224E9F;
+}
+.tour_des1 p{
+    font-size: 20px;
+    color: #272626;
+}
+.des1_movie ul{
+    display: flex;
+    align-items: center;
+    border-top: solid 1px #224E9F;
+    padding-top: 30px;
+}
+.movie_here{
+    padding-left: 40px;
+    background-image: url(../img/program_page/tour_film.png);
+    background-repeat: no-repeat;
+}
+.des1_movie img{
+    padding-right: 10px;
+    padding-top: 3px;
+}
+.movie_name{
+    font-size: 15px;
+    color: #272626;
+    padding-left: 25px;
+}
+/*tour_des2*/
+.tour_des2 h3{
+    padding-bottom: 30px;
+    border-bottom: solid 1px #224E9F;
+}
+.tour_des2 p{
+    font-size: 20px;
+    color: #272626;
+}
+.des2_movie ul{
+    display: flex;
+    align-items: center;
+    border-top: solid 1px #224E9F;
+    padding-top: 30px;
+}
+/*tour_des3*/
+.tour_des3 h3{
+    padding-bottom: 30px;
+    border-bottom: solid 1px #224E9F;
+}
+.tour_des3 p{
+    font-size: 20px;
+    color: #272626;
+}
+.des3_movie ul{
+    display: flex;
+    align-items: center;
+    border-top: solid 1px #224E9F;
+    padding-top: 30px;
+}
+/*tour_des4*/
+.tour_des4 h3{
+    padding-bottom: 30px;
+    border-bottom: solid 1px #224E9F;
+}
+.tour_des4 p{
+    font-size: 20px;
+    color: #272626;
+}
+.des4_movie ul{
+    display: flex;
+    align-items: center;
+    border-top: solid 1px #224E9F;
+    padding-top: 30px;
+}
+/*tour_des5*/
+.tour_des5 h3{
+    padding-bottom: 30px;
+    border-bottom: solid 1px #224E9F;
+}
+.tour_des5 p{
+    font-size: 20px;
+    color: #272626;
+}
+.des5_movie ul{
+    display: flex;
+    align-items: center;
+    border-top: solid 1px #224E9F;
+    padding-top: 30px;
+}
+/*program_reservation*/
+#program_reservation{
+    padding-bottom: 144px;
+}
+#program_reservation h2{
+    font-family: "Gveret Levin", cursive;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    line-height: 1;
+    text-align: center;
+}
+.res_des{
+    display: flex;
+    justify-content: center;
+    column-gap: 85px;
+}
+/*box1*/
+.reservation{
+    background-color: #C7D1E4;
+    width: 400px;
+    height: 300px;
+    border-radius: 55px;
+    position: relative;
+}
+.res_box1{
+    padding: 50px;
+}
+.res_box1 h4{
+    color: #FAFAFA;
+}
+.res_box1 p{
+    font-size: 15px;
+    color: #FAFAFA;
+    padding-top: 25px;
+    padding-bottom: 80px;
+}
+.res_box1 a{
+    display:inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #FAFAFA;
+    padding: 10px 5px;
+    border-radius: 40px;
+    width: 144px;
+    text-align: center;
+}
+.res_box1 img{
+    display:inline-block;
+    width: 17px;
+    padding-left: 10px;
+}
+.calendar{
+    position: absolute;
+    right: -40px;
+    bottom: -5px;
+}
+/*box2*/
+.audio_guide{
+    background-color: #9CAFD3;
+    width: 400px;
+    height: 300px;
+    border-radius: 55px;
+    position: relative;
+}
+.res_box2{
+    padding: 50px;
+}
+.res_box2 h4{
+    color: #FAFAFA;
+}
+.res_box2 p{
+    font-size: 15px;
+    color: #FAFAFA;
+    padding-top: 25px;
+    padding-bottom: 80px;
+}
+.res_box2 a{
+    display:inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #FAFAFA;
+    padding: 10px 5px;
+    border-radius: 40px;
+    width: 144px;
+    text-align: center;
+}
+.res_box2 img{
+    display:inline-block;
+    width: 17px;
+    padding-left: 10px;
+}
+.headphone{
+    position: absolute;
+    right: -80px;
+    bottom: -5px;
+}
+/*box3*/
+.reservation_guide{
+    background-color: #4E71B1;
+    width: 400px;
+    height: 300px;
+    border-radius: 55px;
+    position: relative;
+}
+.res_box3{
+    padding: 50px;
+}
+.res_box3 h4{
+    color: #FAFAFA;
+}
+.res_box3 p{
+    font-size: 15px;
+    color: #FAFAFA;
+    padding-top: 25px;
+    padding-bottom: 80px;
+}
+.res_box3 a{
+    display:inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #FAFAFA;
+    padding: 10px 5px;
+    border-radius: 40px;
+    width: 144px;
+    text-align: center;
+}
+.res_box3 img{
+    display:inline-block;
+    width: 17px;
+    padding-left: 10px;
+}
+.file{
+    position: absolute;
+    right: -35px;
+    bottom: -5px;
+}
+/*footer*/
+#footer{
+    background-color: #E4E8F1;
+}
+#footer .inner{
+    color: #272626;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    width: 1320px;
+    margin: 0 auto;
+    box-sizing:border-box;
+}
+.inner_des li{
+    display: flex;
+    justify-content: end;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+.inner_des span{
+    font-weight: 600;
+    padding: 0 5px;
+}
+#footer .sns{
+    display: flex;
+    gap: 15px;
+}
