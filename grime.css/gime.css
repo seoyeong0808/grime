@@ -55,8 +55,7 @@ body{
 }
 /*video*/
 .brand_video{
-    height: 630px;
-    width: 100;
+    width: 100%;
 }
 /*movie_introduction*/
 #movie_introduction .swiper-slide{
