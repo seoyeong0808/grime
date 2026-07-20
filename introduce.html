@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gveret+Levin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./grime.css/font.css">
+    <!--aos-->>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--css-->
     <link rel="stylesheet" href="./grime.css/introduce.css">
 </head>
@@ -107,8 +109,8 @@
             <img class="floating-image" src="./img/introduce_page/peroson.png"alt="">
         </section>
         <section id="brand_color">
-            <div class="inner">
-                <h2>Brand Color</h2>
+            <div class="inner" data-aos="fade-up">
+                <h2 >Brand Color</h2>
                 <h4>부산의 푸른 풍경과 시네마의 깊이를 표현한 컬러</h4> 
             </div>
             <div class="color">
@@ -149,7 +151,7 @@
             </div>
         </section>
         <section id="crew">
-            <div class="inner">
+            <div class="inner" data-aos="fade-up">
                 <h2>Join the Grime Crew</h2>
             </div>
                 <div class="crew_box">
@@ -197,13 +199,13 @@
         </section>
         <section id="transportation">
             <div class="inner">
-                <h2>transportation</h2>
+                <h2 data-aos="fade-up">transportation</h2>
                  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x356892c3f4f9610f%3A0xa236b2756c513c71!2z7JiB7ZmU7J2Y7KCE64u5!5e0!3m2!1sko!2skr!4v1782878073895!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
                  </iframe>
             </div>
             <div class="trans_des">
                 <div class="trans_car">
-                    <img src="./img/introduce_page/car.png" alt="자동차">
+                    <img src="./img/introduce_page/car.png" alt="자동차" data-aos="fade-right">
                     <div class="car_box">
                         <h2>자가용</h2>
                         <p>
@@ -213,7 +215,7 @@
                     </div>
                 </div>
                 <div class="trans_subway">
-                    <img src="./img/introduce_page/subway.png" alt="지하철">
+                    <img src="./img/introduce_page/subway.png" alt="지하철" data-aos="fade-up">
                     <div class="sub_box">
                         <h2>지하철</h2>
                         <p>
@@ -222,7 +224,7 @@
                     </div>
                 </div>
                 <div class="trans_bus">
-                    <img src="./img/introduce_page/bus.png" alt="버스">
+                    <img src="./img/introduce_page/bus.png" alt="버스" data-aos="fade-left">
                     <div class="bus_box">
                         <h2>
                             시외 교통수단<br>
@@ -249,117 +251,13 @@
                         <span>운영시간</span>   09:00 ~ 18:00   점심시간 12:00 ~ 13:00  주말 및 공휴일 미운영
                     </li>
                     <li>
-                        <span>주소</span>   88088 부산광역시 해운대구 ㅇㅇㅇ로 88 8층
+                        <span>주소</span>   88088 부산광역시 해운대구 영화로 88 8층
                     </li>
                 </ul>
             </div>
         </section>
     </main>
-
-    <script>
-    const slides = document.querySelectorAll(".slide");
-     /*추가*/
-     const slider = document.querySelector("#brand_slider");//수정
-const floatingImage = document.querySelector(".floating-image");
-/*함수 전체수정*/
-function getFinalRect(index){
-    const sliderWidth = slider.clientWidth;
-    const sliderHeight = slider.clientHeight;
-
-    const activeFlex = 3;
-    const normalFlex = 1;
-    const totalFlex = activeFlex + normalFlex * (slides.length - 1);
-
-    let beforeFlex = 0;
-
-    for(let i = 0; i < index; i++){
-        beforeFlex += normalFlex;
-    }
-
-    const left = sliderWidth * (beforeFlex / totalFlex);
-    const width = sliderWidth * (activeFlex / totalFlex);
-
-    return {
-        left: left,
-        width: width,
-        bottom: sliderHeight
-    };
-}
-
-/*함수 전체 수정*/
-function moveFloatingImage(index){
-    const slide = slides[index];
-    const rect = getFinalRect(index);
-
-    const xPercent = Number(slide.dataset.x || 0);
-    const bottomGap = Number(slide.dataset.bottom || 0);
-
-    let left = rect.left + rect.width * (xPercent / 100);
-
-    const imgWidth = floatingImage.offsetWidth;
-
-    if(xPercent <= 0){
-        left = 0;
-    }
-
-    if(xPercent >= 100){
-        left = slider.clientWidth;
-    }
-
-    floatingImage.style.left = left + "px";
-    floatingImage.style.top = (rect.bottom - bottomGap) + "px";
-    floatingImage.style.transform = getImageAnchor(xPercent);
-}
-/*추가*/
-function getImageAnchor(xPercent){
-    if(xPercent <= 0){
-        return "translate(0,-100%)";
-    }
-
-    if(xPercent >= 100){
-        return "translate(-100%,-100%)";
-    }
-
-    return "translate(-50%,-100%)";
-}
-
-function moveFloatingImage(index){
-    const slide = slides[index];
-    const rect = getFinalRect(index);
-
-    // [수정 가능] HTML의 data-x, data-bottom 값을 읽어옵니다.
-    const xPercent = Number(slide.dataset.x || 0);
-    const bottomGap = Number(slide.dataset.bottom || 30);
-
-    floatingImage.style.left = (rect.left + rect.width * (xPercent / 100)) + "px";
-    floatingImage.style.top = (rect.bottom - bottomGap) + "px";
-
-    // [추가된 부분] data-x 값에 따라 이미지 기준점 변경
-    floatingImage.style.transform = getImageAnchor(xPercent);
-}
-
-
-window.addEventListener("load",()=>{
-    const activeIndex = [...slides].findIndex(slide => slide.classList.contains("active"));
-    moveFloatingImage(activeIndex);
-});
-
-
-window.addEventListener("resize",()=>{
-    const activeIndex = [...slides].findIndex(slide => slide.classList.contains("active"));
-    moveFloatingImage(activeIndex);
-});
-     /*추가 끝*/
-      slides.forEach((slide, index)=>{//수정
-        slide.addEventListener("mouseenter",()=>{
-            slides.forEach(item=>{
-                item.classList.remove("active");
-            });
-            slide.classList.add("active");
-            // [추가된 부분] active slide 기준 위치로 이미지 이동
-            moveFloatingImage(index);
-        });
-     });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./JS/introduce.js"></script>
 </body>
 </html>

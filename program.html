@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gveret+Levin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./grime.css/font.css">
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--css-->
     <link rel="stylesheet" href="./grime.css/program.css">
 </head>
@@ -33,7 +35,7 @@
     </header>
     <section id="main">
         <section id="program_introduce">
-            <div class="inner">
+            <div class="inner" data-aos="fade-up">
                 <h2>Program Introduce</h2>
             </div>
              <!-- Swiper -->
@@ -50,7 +52,7 @@
         </section>
         <section id="one_day_tour">
             <div class="inner">
-                <h2>One Day Tour</h2>
+                <h2 data-aos="fade-up">One Day Tour</h2>
                 <video class="video" src="./video/tour_video.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="tour_bg">
@@ -193,7 +195,7 @@
             </div>
         </section>
         <section id="program_reservation">
-            <div class="inner">
+            <div class="inner" data-aos="fade-up">
                 <h2>Program Introduce</h2>
             </div>
             <div class="res_des">
@@ -203,7 +205,7 @@
                         <p>프로그램을 예약할 수 있습니다.</p>
                         <a href="#">바로가기<img src="./img/program_page/arrow.png" alt="화살표"></a>
                     </div>
-                    <img class="calendar" src="./img/program_page/reservation_icon1.png" alt="달력">
+                    <img class="calendar" src="./img/program_page/reservation_icon1.png" alt="달력" data-aos="fade-right">
                 </div>
                 <div class="audio_guide">
                     <div class="res_box2">
@@ -211,7 +213,7 @@
                         <p>오디오 가이드를 예약할 수 있습니다.</p>
                         <a href="#">바로가기<img src="./img/program_page/arrow.png" alt="화살표"></a>
                     </div>
-                    <img class="headphone" src="./img/program_page/reservation_icon2.png" alt="헤드폰">
+                    <img class="headphone" src="./img/program_page/reservation_icon2.png" alt="헤드폰" data-aos="fade-up">
                 </div>
                 <div class="reservation_guide">
                     <div class="res_box3">
@@ -219,7 +221,7 @@
                         <p>오디오 가이드를 예약할 수 있습니다.</p>
                         <a href="#">바로가기<img src="./img/program_page/arrow.png" alt="화살표"></a>
                     </div>
-                    <img class="file" src="./img/program_page/reservation_icon3.png" alt="파일">
+                    <img class="file" src="./img/program_page/reservation_icon3.png" alt="파일" data-aos="fade-left">
                 </div>
             </div>
         </section>
@@ -238,7 +240,7 @@
                     <span>운영시간</span>   09:00 ~ 18:00   점심시간 12:00 ~ 13:00  주말 및 공휴일 미운영
                 </li>
                 <li>
-                    <span>주소</span>   88088 부산광역시 해운대구 ㅇㅇㅇ로 88 8층
+                    <span>주소</span>   88088 부산광역시 해운대구 영화로 88 8층
                 </li>
             </ul>
         </div>
@@ -246,38 +248,9 @@
 
     <!-- Swiper JS Tour -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.tour', {
-        spaceBetween: 30,
-        centeredSlides: true,
-         autoplay: {
-           delay: 2500,
-           disableOnInteraction: false,
-         },
-        
-      });
-    </script>
-
     <!-- Swiper JS program_poster -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.program_img', {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        loop: true,
-        autoplay: {
-            delay: 3000, // 3초마다 자동 이동
-            disableOnInteraction: false, // 드래그 후에도 자동재생 유지
-            pauseOnMouseEnter: true, // 마우스를 올리면 일시정지(선택)
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./JS/program.js"></script>
 </body>
 </html>

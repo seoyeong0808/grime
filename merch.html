@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gveret+Levin&display=swap" rel="stylesheet">
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./grime.css/font.css">
     <!--css-->
     <link rel="stylesheet" href="./grime.css/merch.css">
@@ -32,7 +34,7 @@
     <section id="main">
         <section id="main_poster">
             <div class="line1"></div>
-            <div class="lin2"></div>
+            <div class="line2"></div>
             <div class="main_des">
                 <img src="./img/merch_page/main_des.svg" alt="">
                 <P>
@@ -42,7 +44,7 @@
             </div>
         </section>
         <section id="collection">
-            <div class="inner">
+            <div class="inner" data-aos="fade-up">
                 <h2>Merch Collection</h2>
             </div>
             <svg class="icon1" width="314" height="314" viewBox="0 0 314 314" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +53,6 @@
                 <path d="M173.394 94.4616L167.387 82.8993M189.409 125.29L185.402 117.584M205.423 156.123L201.423 148.414M223.445 190.804L217.438 179.242" stroke="#224E9F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
                 </g>
                 </svg>
-                
             <!-- Swiper -->
             <div class="swiper collection_img">
               <div class="swiper-wrapper">
@@ -98,7 +99,7 @@
             </div>
         </section>
         <section id="detail">
-            <div class="inner">
+            <div class="inner" data-aos="fade-up">
                 <h2>Detail View</h2>
             </div>
             <svg class="icon2" width="297" height="256" viewBox="0 0 297 256" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +197,7 @@
                     <span>운영시간</span>   09:00 ~ 18:00   점심시간 12:00 ~ 13:00  주말 및 공휴일 미운영
                 </li>
                 <li>
-                    <span>주소</span>   88088 부산광역시 해운대구 ㅇㅇㅇ로 88 8층
+                    <span>주소</span>   88088 부산광역시 해운대구 영화로 88 8층
                 </li>
             </ul>
         </div>
@@ -204,48 +205,9 @@
     <!-- Swiper JS collection -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.collection_img', {
-        slidesPerView: 3,
-        spaceBetween: 40,
-        autoplay: {
-            delay: 3000, // 3초마다 자동으로 넘어감
-            // disableOnInteraction: false, // 사용자가 슬라이드를 넘겨도 자동재생 계속
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          
-        },
-      });
-    </script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-    <script>
-    function drawSvg(selector){
-        const paths = document.querySelectorAll(`${selector} path`);
-        paths.forEach(path => {
-            const length = path.getTotalLength();
-            gsap.set(path,{
-                strokeDasharray:length,
-                strokeDashoffset:length
-            });
-            gsap.to(path,{
-                strokeDashoffset:0,
-                duration:2,
-                ease:"power2.out",
-                scrollTrigger:{
-                    trigger:selector,
-                    start:"top 70%",
-                    toggleActions:"play none none none"
-                }
-            });
-        });
-    }
-    drawSvg(".icon1");
-    drawSvg(".icon2");
-    drawSvg(".icon3");
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./JS/merch.js"></script>
 </body>
 </html>
