@@ -36,4 +36,6 @@ drawSvg(".icon1");
 drawSvg(".icon2");
 drawSvg(".icon3");
 
-AOS.init();
+AOS.init({
+    duration:800,
+});

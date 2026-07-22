@@ -23,4 +23,6 @@ var swiper = new Swiper('.tour', {
     },
   });
 
-  AOS.init();
+  AOS.init({
+    duration:800,
+});

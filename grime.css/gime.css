@@ -19,12 +19,13 @@ body{
     font-size: 25px;
     color: #224E9F;
     line-height: 1.5;
+    min-width: 1450px;
     
 }
 /*main*/
 #main{
     background-image: url(../img/main_page/background_bg.png);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 /*header*/
 #header{

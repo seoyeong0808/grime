@@ -101,4 +101,6 @@ window.addEventListener("resize",()=>{
         });
      });
 
-     AOS.init();
+     AOS.init({
+        duration:800,
+    });

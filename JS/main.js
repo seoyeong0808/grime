@@ -83,4 +83,6 @@ function drawSvg(selector){
         effect: "fade",
     });
     
-    AOS.init();
+    AOS.init({
+        duration:800,
+    });

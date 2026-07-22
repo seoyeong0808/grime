@@ -19,7 +19,7 @@ body{
     font-size: 25px;
     color: #224E9F;
     line-height: 1.5;
-    
+    min-width: 1450px;
 }
 /*header*/
 #header{
@@ -113,7 +113,7 @@ body{
     left: -50px;
 }
 .collection_img{
-    width: 1730px;
+    max-width: 1730px;
     margin: 0 auto;
 }
 .swiper-slide{
